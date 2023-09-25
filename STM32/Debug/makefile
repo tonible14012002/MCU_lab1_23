@@ -64,8 +64,8 @@ all: main-build
 main-build: STM.elf secondary-outputs
 
 # Tool invocations
-STM.elf: $(OBJS) $(USER_OBJS) D:\MCU_LAB1\EX1\STM32\STM32F103C6UX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "STM.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\MCU_LAB1\EX1\STM32\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+STM.elf: $(OBJS) $(USER_OBJS) D:\COURSES\MCU\LABS\Lab1\EX2\STM32\STM32F103C6UX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "STM.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\COURSES\MCU\LABS\Lab1\EX2\STM32\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
